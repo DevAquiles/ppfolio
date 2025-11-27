@@ -1,0 +1,168 @@
+/* ------------------------------------------- */
+/* 1. CONFIGURAÇÕES GLOBAIS E TIPOGRAFIA       */
+/* ------------------------------------------- */
+
+/* Reseta margens e paddings básicos para consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte principal e cor de fundo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000; /* Um cinza claro suave */
+    color: #ffffff; /* Texto escuro padrão */
+    line-height: 1.6;
+}
+
+/* Estilo para links */
+a {
+    color: #33ff00; /* Azul vibrante para links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estiliza o conteúdo principal com largura e centralização */
+body > * {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ------------------------------------------- */
+/* 2. CABEÇALHO (HEADER) E TÍTULOS             */
+/* ------------------------------------------- */
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #000000; /* Linha de destaque azul */
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #7b00ce;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Estilo para títulos de seção */
+h2 {
+    font-size: 2em;
+    color: #ffffff; /* Cinza escuro para destaque */
+    margin-bottom: 25px;
+    border-bottom: 2px solid #5900ff;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* ------------------------------------------- */
+/* 3. SEÇÕES DE CONTEÚDO (MÚSICAS, HOBBIES)    */
+/* ------------------------------------------- */
+
+section {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    background-color: #000000;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra suave */
+    text-align: center;
+}
+
+/* Estilo para as listas */
+ul {
+    list-style: none; /* Remove bolinhas padrão */
+    padding: 0;
+    margin-top: 20px;
+    display: flex; /* Para centralizar os itens em linha se quiser */
+    flex-direction: column; /* Manter em coluna, mas com estilização */
+    align-items: center;
+}
+
+li {
+    background-color: #53006d; /* Fundo cinza claro para cada item */
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 80%; /* Ocupa 80% da largura da seção */
+    text-align: left;
+}
+
+
+/* ------------------------------------------- */
+/* 4. ESTILIZAÇÃO DAS IMAGENS (DIVS)           */
+/* ------------------------------------------- */
+
+/* Contêiner genérico para as imagens */
+.imagem-perfil, .imagem-musica, .imagem-hobbies {
+    margin: 20px auto;
+    width: 250px; /* Largura padrão para as caixas de imagem */
+    height: 250px; /* Altura padrão para as caixas de imagem */
+    overflow: hidden; /* Garante que a imagem fique dentro do container */
+    border: 5px solid #7700ff; /* Borda de destaque azul */
+    border-radius: 50%; /* Faz a imagem de perfil ser circular */
+    box-shadow: 0 0 15px rgba(132, 0, 255, 0.4); /* Sombra azul suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: brilho_e_move 1.5s infinite alternate;
+}
+@keyframes brilho_e_move {
+    to {
+        transform: translateY(20px);
+        box-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan;
+    }
+}
+
+/* Estiliza as tags de imagem dentro dos contêineres */
+.imagem-perfil img, .imagem-musica img, .imagem-hobbies img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    display: block;
+}
+
+/* Ajuste específico para as outras imagens, se não quiserem ser circulares */
+.imagem-musica, .imagem-hobbies {
+    border-radius: 8px; /* Cantos arredondados normais */
+    width: 300px; /* Altera para um formato retangular/quadrado maior */
+    height: 200px;
+    border: 3px solid #ffffff; /* Borda de cor diferente */
+}
+
+/* ------------------------------------------- */
+/* 5. RODAPÉ (FOOTER)                          */
+/* ------------------------------------------- */
+
+footer {
+    background-color: #343a40; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 50px;
+}
+
+/* ------------------------------------------- */
+/* 6. LINHA HORIZONTAL (HR)                    */
+/* ------------------------------------------- */
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    margin: 40px auto;
+    width: 80%;
+}
+
+
